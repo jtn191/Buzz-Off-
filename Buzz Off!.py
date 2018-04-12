@@ -2,8 +2,8 @@
 #
 # Buzz Off!
 # A simple platforming/puzzle game by Jeff and Zach
-# **website here**
-#
+# credit to Dev for photography and design help
+#**website here**
 #
 
 import pygame, sys
@@ -20,6 +20,8 @@ display_width = 800
 display_height = 720
 gameDisplay = pygame.display.set_mode((display_width,display_height))
 
+
+    
 
 # from https://python-forum.io/Thread-PyGame-Creating-a-state-machine
 
@@ -126,14 +128,14 @@ Lightest_Green = (155, 188, 15)
 
 
 
-BeeImg = pygame.image.load('Bee2.png').convert_alpha()
+BeeImg = pygame.image.load('Bee_clone.png').convert_alpha()
 
 def Bee (x,y):
     gameDisplay.blit (BeeImg, (x,y))
 
 
-x = (display_width * 0.45)
-y = (display_width * 0.8)
+x = (display_width * 0.5)
+y = (display_width * 0.82)
 
 x_change = 0
 
@@ -241,11 +243,14 @@ while not crashed:
             if event.key == pygame.K_LEFT or pygame.K_RIGHT:
                 x_change = 0
     
-    x += x_change
+    x += x_change 
             
     gameDisplay.fill(Lightest_Green)
     Bee (x,y)
     
+
+
+
     
     pygame.display.update()
     
